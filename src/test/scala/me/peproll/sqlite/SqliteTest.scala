@@ -1,5 +1,6 @@
 package me.peproll.sqlite
 
+import me.peproll.sqlite.underline.Sqlite
 import utest._
 
 import scala.scalajs.js

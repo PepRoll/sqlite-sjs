@@ -26,6 +26,7 @@ npmDependencies in Compile ++= Seq(
 )
 
 libraryDependencies ++= Seq(
+  "org.scala-lang.modules" %% "scala-async" % "0.9.7",
   "com.lihaoyi" %%% "utest" % "0.6.0" % "test"
 )
 

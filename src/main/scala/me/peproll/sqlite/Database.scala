@@ -22,6 +22,16 @@ trait Database extends js.Object {
   def close(): Database = js.native
 }
 
+object Database {
+  final implicit class DatabaseOps(val db: Database) extends AnyVal {
+
+    def migrate(force: Boolean = false,
+                table: String = "migrations",
+                migrationsPath: String = "./migrations"): Unit =
+      Migration.migrate(force, table, migrationsPath)
+  }
+}
+
 @ScalaJSDefined
 class ConnectionOptions(memory: Boolean = false,
                         readonly: Boolean = false,
