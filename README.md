@@ -33,8 +33,8 @@ trait User extends js.Object {
   def name: String = js.native
 }
 
-val db = Sqlite('foobar.db', new ConnectionOptions())
-var row = db.prepare('SELECT * FROM users WHERE id=?').get[User](userId)
+val db = Sqlite("foobar.db", new ConnectionOptions())
+var row = db.prepare("SELECT * FROM users WHERE id=?").get[User](userId)
 println(s"Username: ${row.name}")
 ```
 
