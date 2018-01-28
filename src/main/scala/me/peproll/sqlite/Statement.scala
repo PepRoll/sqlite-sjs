@@ -2,7 +2,6 @@ package me.peproll.sqlite
 
 import scala.scalajs.js
 import scala.scalajs.js.Any
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 @js.native
 trait Statement extends js.Object {
@@ -17,7 +16,3 @@ trait Statement extends js.Object {
   def pluck(toggleState: Boolean): Statement = js.native
   def bind(bindParameters: Any*): Statement = js.native
 }
-
-@ScalaJSDefined
-class FunctionOptions(name: String, deterministic: Boolean, varargs: Boolean)
-  extends js.Object

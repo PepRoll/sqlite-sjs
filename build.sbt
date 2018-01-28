@@ -16,9 +16,9 @@ scalacOptions ++= Seq(
 )
 crossScalaVersions := Seq("2.11.11", "2.12.4")
 
-enablePlugins(ScalaJSBundlerPlugin, ScalaJSPlugin)
+enablePlugins(ScalaJSBundlerPlugin)
 
-jsEnv := new org.scalajs.jsenv.nodejs.NodeJSEnv()
+scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.CommonJSModule) }
 testFrameworks += new TestFramework("utest.runner.Framework")
 
 npmDependencies in Compile ++= Seq(
@@ -26,6 +26,7 @@ npmDependencies in Compile ++= Seq(
 )
 
 libraryDependencies ++= Seq(
+  "org.scala-lang.modules" %% "scala-async" % "0.9.7",
   "com.lihaoyi" %%% "utest" % "0.6.0" % "test"
 )
 
