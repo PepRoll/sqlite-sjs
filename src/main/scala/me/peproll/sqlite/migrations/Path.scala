@@ -1,4 +1,4 @@
-package me.peproll.sqlite.nodejs
+package me.peproll.sqlite.migrations
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
