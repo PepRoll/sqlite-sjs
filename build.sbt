@@ -1,6 +1,6 @@
 name := "sqlite-sjs"
 
-version := "0.0.1"
+version := "0.0.2"
 organization := "me.peproll"
 scalaVersion := "2.12.4"
 scalacOptions ++= Seq(
@@ -34,23 +34,31 @@ libraryDependencies ++= Seq(
 
 useGpg := true
 
-licenses := Seq("Apache 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
+publishMavenStyle := false
 
-scmInfo := Some(
-  ScmInfo(
-    url("https://github.com/PepRoll/sqlite-sjs"),
-    "scm:git@github.com:PepRoll/sqlite-sjs.git"
-  )
-)
+publishArtifact in Test := false
 
-developers := List(
-  Developer(
-    id = "PepRoll",
-    name = "Stanislav Kovalenko",
-    email = "peproll@protonmail.com",
-    url = url("http://peproll.me")
-  )
-)
+pomExtra :=
+  <url>https://github.com/PepRoll/sqlite-sjs</url>
+    <licenses>
+      <license>
+        <name>Apache 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      </license>
+    </licenses>
+    <scm>
+      <connection>scm:git@github.com:PepRoll/sqlite-sjs.git</connection>
+      <developerConnection>scm:git@github.com:PepRoll/sqlite-sjs.git</developerConnection>
+      <url>https://github.com/PepRoll/sqlite-sjs</url>
+    </scm>
+    <developers>
+      <developer>
+        <id>PepRoll</id>
+        <name>Stanislav Kovalenko</name>
+        <email>peproll@protonmail.com</email>
+        <url>http://peproll.me</url>
+      </developer>
+    </developers>
 
 publishTo := Some(
   if (isSnapshot.value)
