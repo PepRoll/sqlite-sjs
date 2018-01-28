@@ -43,4 +43,3 @@ println(s"Username: ${row.name}")
 
 
 ### Some stuff
-
