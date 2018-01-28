@@ -16,6 +16,8 @@ SBT project:
 
 
 ## Usage
+`libraryDependencies += "me.peproll" %%% "sqlite-sjs" % "1.0.0"`
+
 
 From js code:
 ```js
@@ -38,9 +40,7 @@ var row = db.prepare("SELECT * FROM users WHERE id=?").get[User](userId)
 println(s"Username: ${row.name}")
 ```
 
-
 ## Migrations
 
 
 ## Some stuff
-
