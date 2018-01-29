@@ -15,8 +15,6 @@ install:
 
 script:
   - sbt ++$TRAVIS_SCALA_VERSION test
-  - sbt ++$TRAVIS_SCALA_VERSION 'set parallelExecution in ThisBuild := false' test
-  - bin/checkDevOnly $TRAVIS_SCALA_VERSION
 
 # Taken from https://github.com/typelevel/cats/blob/master/.travis.yml
 before_cache:
