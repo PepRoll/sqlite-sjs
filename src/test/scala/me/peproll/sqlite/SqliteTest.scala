@@ -1,6 +1,5 @@
 package me.peproll.sqlite
 
-import me.peproll.sqlite.migrations.Fs
 import utest._
 
 import scala.async.Async._
@@ -15,7 +14,6 @@ object SqliteTest extends TestSuite {
   val tests = Tests {
 
     def initDb(): Database = {
-      Fs.unlinkSync(testPath)
       Sqlite(testPath, new ConnectionOptions(memory = true))
     }
 

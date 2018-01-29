@@ -14,7 +14,6 @@ scalacOptions ++= Seq(
   "-Yno-adapted-args",
   "-Ywarn-value-discard"
 )
-crossScalaVersions := Seq("2.11.12", "2.12.4")
 
 enablePlugins(ScalaJSBundlerPlugin)
 
