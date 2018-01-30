@@ -1,6 +1,6 @@
 name := "sqlite-sjs"
 
-version := "0.0.2"
+version := "0.0.3"
 organization := "me.peproll"
 scalaVersion := "2.12.4"
 scalacOptions ++= Seq(
