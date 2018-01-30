@@ -13,7 +13,7 @@ NPM project:
 
 SBT project:
 
-`libraryDependencies += "me.peproll" %%% "sqlite-sjs" % "0.0.2"`
+`libraryDependencies += "me.peproll" %%% "sqlite-sjs" % "0.0.3"`
 
 
 ## Usage
